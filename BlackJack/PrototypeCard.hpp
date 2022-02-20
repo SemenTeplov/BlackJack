@@ -1,3 +1,5 @@
+#include "Suit.hpp"
+
 #ifndef __PROTOTYPECARD__
 #define __PROTOTYPECARD__
 

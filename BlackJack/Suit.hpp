@@ -8,10 +8,10 @@ public:
 	Suit() {};
 	~Suit() {};
 
-	std::string getHeart();
-	std::string getDimond();
-	std::string getClubs();
-	std::string getPeaks();
+	std::string getHeart() const;
+	std::string getDimond() const;
+	std::string getClubs() const;
+	std::string getPeaks() const;
 
 private:
 	std::string _herat = "heart";

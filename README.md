@@ -18,3 +18,6 @@ Points:
 
 Use Case 
 [BlackJeck Use Case (1).pdf](https://github.com/SemenTeplov/BlackJack/files/8104292/BlackJeck.Use.Case.1.pdf)
+
+Sequence
+[BlackJeck sequence (1).pdf](https://github.com/SemenTeplov/BlackJack/files/8104297/BlackJeck.sequence.1.pdf)

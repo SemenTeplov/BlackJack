@@ -21,3 +21,7 @@ Use Case
 
 Sequence
 [BlackJeck sequence (1).pdf](https://github.com/SemenTeplov/BlackJack/files/8104297/BlackJeck.sequence.1.pdf)
+
+Activity
+[BlackJeck activity (1).pdf](https://github.com/SemenTeplov/BlackJack/files/8104303/BlackJeck.activity.1.pdf)
+

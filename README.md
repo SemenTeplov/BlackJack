@@ -25,3 +25,5 @@ Sequence
 Activity
 [BlackJeck activity (1).pdf](https://github.com/SemenTeplov/BlackJack/files/8104303/BlackJeck.activity.1.pdf)
 
+Class
+[BlackJeck class (1).pdf](https://github.com/SemenTeplov/BlackJack/files/8104307/BlackJeck.class.1.pdf)

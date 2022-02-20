@@ -8,15 +8,15 @@ public:
 	PrototypeCard() {};
 	~PrototypeCard() {};
 
-	int getSix();
-	int getSeven();
-	int getEight();
-	int getNine();
-	int getTen();
-	int getKnight();
-	int getQueen();
-	int getKing();
-	int getAce();
+	int getSix() const;
+	int getSeven() const;
+	int getEight() const;
+	int getNine() const;
+	int getTen() const;
+	int getKnight() const;
+	int getQueen() const;
+	int getKing() const;
+	int getAce() const;
 
 private:
 	int _six = 6;

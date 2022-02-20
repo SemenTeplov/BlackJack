@@ -139,13 +139,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Card.cpp" />
+    <ClCompile Include="Chip.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Dealer.cpp" />
+    <ClCompile Include="Deck.cpp" />
     <ClCompile Include="Hand.cpp" />
+    <ClCompile Include="Image.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PrototypeCard.cpp" />
+    <ClCompile Include="PrototypeChip.cpp" />
+    <ClCompile Include="Suit.cpp" />
+    <ClCompile Include="Table.cpp" />
+    <ClCompile Include="visualCard.cpp" />
+    <ClCompile Include="visualChip.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Card.hpp" />
+    <ClInclude Include="Chip.hpp" />
+    <ClInclude Include="Color.hpp" />
+    <ClInclude Include="Dealer.hpp" />
+    <ClInclude Include="Deck.hpp" />
     <ClInclude Include="Hand.hpp" />
+    <ClInclude Include="Image.hpp" />
     <ClInclude Include="Player.hpp" />
+    <ClInclude Include="PrototypeCard.hpp" />
+    <ClInclude Include="PrototypeChip.hpp" />
+    <ClInclude Include="Suit.hpp" />
+    <ClInclude Include="Table.hpp" />
+    <ClInclude Include="visualCard.hpp" />
+    <ClInclude Include="visualChip.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

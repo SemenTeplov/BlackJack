@@ -1,37 +1,37 @@
 #include "PrototypeCard.hpp"
 
-int PrototypeCard::getSix() const {
+char PrototypeCard::getSix() const {
 	return _six;
 };
 
-int PrototypeCard::getSeven() const {
+char PrototypeCard::getSeven() const {
 	return _seven;
 };
 
-int PrototypeCard::getEight() const {
+char PrototypeCard::getEight() const {
 	return _eight;
 };
 
-int PrototypeCard::getNine() const {
+char PrototypeCard::getNine() const {
 	return _nine;
 };
 
-int PrototypeCard::getTen() const {
+char PrototypeCard::getTen() const {
 	return _ten;
 };
 
-int PrototypeCard::getKnight() const {
+char PrototypeCard::getKnight() const {
 	return _knight;
 };
 
-int PrototypeCard::getQueen() const {
+char PrototypeCard::getQueen() const {
 	return _queen;
 };
 
-int PrototypeCard::getKing() const {
+char PrototypeCard::getKing() const {
 	return _king;
 };
 
-int PrototypeCard::getAce() const {
+char PrototypeCard::getAce() const {
 	return _ace;
 };

@@ -18,7 +18,7 @@ public:
 
 private:
 	int indFirstCard;
-	//std::vector<Card> _deck;
+
 	Card *card;
 
 	int randomNumber();

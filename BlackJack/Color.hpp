@@ -8,10 +8,10 @@ public:
 	Color() {};
 	~Color() {};
 
-	std::string getWhite() const;
-	std::string getRed() const;
-	std::string getGreen() const;
-	std::string getBlack() const;
+	std::string getWhite();
+	std::string getRed();
+	std::string getGreen();
+	std::string getBlack();
 
 private:
 	std::string _white = "white";

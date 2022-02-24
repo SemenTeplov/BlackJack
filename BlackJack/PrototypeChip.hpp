@@ -8,10 +8,10 @@ public:
 	PrototypeChip() {};
 	~PrototypeChip() {};
 
-	int getVWhite() const;
-	int getVRed() const;
-	int getVGreen() const;
-	int getVBlack() const;
+	int getVWhite();
+	int getVRed();
+	int getVGreen();
+	int getVBlack();
 
 private:
 	int _valueWhite = 1;

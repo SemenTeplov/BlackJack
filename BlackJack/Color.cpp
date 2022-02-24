@@ -1,17 +1,17 @@
 #include "Color.hpp"
 
-std::string Color::getWhite() const {
+std::string Color::getWhite() {
 	return _white;
 };
 
-std::string Color::getRed() const {
+std::string Color::getRed() {
 	return _red;
 };
 
-std::string Color::getGreen() const {
+std::string Color::getGreen() {
 	return _green;
 };
 
-std::string Color::getBlack() const {
+std::string Color::getBlack() {
 	return _black;
 };

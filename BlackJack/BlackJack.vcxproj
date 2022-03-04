@@ -158,6 +158,8 @@
     <ClCompile Include="PrototypeChip.cpp" />
     <ClCompile Include="Suit.cpp" />
     <ClCompile Include="Table.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="UI.cpp" />
     <ClCompile Include="visualCard.cpp" />
     <ClCompile Include="visualChip.cpp" />
   </ItemGroup>
@@ -174,6 +176,8 @@
     <ClInclude Include="PrototypeChip.hpp" />
     <ClInclude Include="Suit.hpp" />
     <ClInclude Include="Table.hpp" />
+    <ClInclude Include="Texture.hpp" />
+    <ClInclude Include="UI.hpp" />
     <ClInclude Include="visualCard.hpp" />
     <ClInclude Include="visualChip.hpp" />
   </ItemGroup>

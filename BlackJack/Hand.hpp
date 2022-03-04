@@ -1,10 +1,12 @@
+#include "Player.hpp"
+
 #ifndef __HAND__
 #define __HAND__
 
-class Hand {
+class Hand : Player {
 public:
-
-private:
+	Hand() {};
+	~Hand() {};
 
 };
 

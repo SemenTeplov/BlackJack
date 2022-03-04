@@ -32,6 +32,6 @@ char PrototypeCard::getKing() const {
 	return _king;
 };
 
-char PrototypeCard::getAce() const {
-	return _ace;
-};
+//char PrototypeCard::getAce() const {
+//	return _ace;
+//};

@@ -8,7 +8,7 @@ public:
 	UI(SDL_Renderer *renderer);
 	~UI() {};
 
-	void getMenu(int posX, int posY, bool left);
+	int getMenu(int posX, int posY, bool left);
 
 private:
 	class Button {
@@ -31,6 +31,8 @@ private:
 
 		Texture *texture;
 	};
+
+	int number = 0;
 
 	SDL_Renderer *_renderer;
 

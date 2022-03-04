@@ -27,7 +27,3 @@ int Player::getCountCards() {
 int Player::getCountChips() {
 	return chips.size();
 };
-
-bool Player::enough() {
-	return true;
-};

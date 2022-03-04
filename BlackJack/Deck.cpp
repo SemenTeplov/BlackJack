@@ -3,7 +3,7 @@
 
 Deck::Deck() {
 	for (int s = 1; s < 5; s++) {
-		for (int v = 1; v < 10; v++) {
+		for (int v = 1; v < 9; v++) {
 			card = new Card(v, s);
 			_deck.push_back(*card);
 		}
@@ -13,13 +13,14 @@ Deck::Deck() {
 int Deck::randomNumber() {
 	std::random_device engine;
 	std::mt19937 gen(engine());
-	std::uniform_int_distribution<int> dist(1, 36);
+	std::uniform_int_distribution<int> dist(1, getSize());
 
 	return dist(gen);
 };
 
 Card Deck::getCard() {
-	indFirstCard = randomNumber() - 1;
+	indFirstCard = randomNumber();
+	std::cout << indFirstCard << std::endl;
 	Card tamCard = _deck.at(indFirstCard);
 	_deck.erase(_deck.begin() + indFirstCard);
 

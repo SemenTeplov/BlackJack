@@ -7,7 +7,7 @@
 class Texture {
 public:
 	Texture(SDL_Renderer *renderer, const char *path);
-	~Texture();
+	~Texture() {};
 
 	SDL_Texture *getTexture();
 

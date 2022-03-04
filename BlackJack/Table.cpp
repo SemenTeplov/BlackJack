@@ -1,10 +1,13 @@
 #include "Table.hpp"
 
+#include <iostream>
+
 Table::Table() {
 	init();
 
 	while (run) {
 		SDL_GetMouseState(&posMouseX, &posMouseY);
+		click = false;
 
 		while (SDL_PollEvent(&event) != 0) {
 			if (event.type == SDL_QUIT) {
@@ -26,7 +29,26 @@ Table::Table() {
 
 		SDL_RenderClear(renderer);
 		SDL_RenderCopy(renderer, tTable, NULL, NULL);
-		ui->getMenu(posMouseX, posMouseY, click);
+		number = ui->getMenu(posMouseX, posMouseY, click);
+
+		if (number == 1) {
+
+		}
+		else if (number == 2) {
+			Card* card = new Card(deck.getCard());
+			hand->setCard(*card);
+			vCard = new VisualCard(renderer,
+				card->getSuit(),
+				card->getValue());
+		}
+		else if (number == 3) {
+
+		}
+
+		if (vCard != nullptr) {
+			vCard->visual();
+		}
+
 		SDL_RenderPresent(renderer);
 	}
 };
@@ -59,4 +81,5 @@ void Table::init() {
 	table = new Texture(renderer, "res/TableBlaxkjack.png");
 	tTable = table->getTexture();
 	ui = new UI(renderer);
+	hand = new Hand();
 };

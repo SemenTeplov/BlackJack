@@ -7,11 +7,6 @@ Texture::Texture(SDL_Renderer *renderer, const char *path) :
 	SDL_FreeSurface(_surface);
 };
 
-Texture::~Texture() {
-	SDL_DestroyTexture(_texture);
-	SDL_DestroyRenderer(_renderer);
-};
-
 SDL_Texture *Texture::getTexture() {
 	return _texture;
 };

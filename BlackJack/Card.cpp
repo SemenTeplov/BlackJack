@@ -25,9 +25,9 @@ Card::Card(int value, int suit) : _numValue(value), _numSuit(suit) {
 	else if (_numValue == 8) {
 		_value = getKing();
 	}
-	else if (_numValue == 9) {
+	/*else if (_numValue == 9) {
 		_value = getAce();
-	}
+	}*/
 
 	setSuit();
 };

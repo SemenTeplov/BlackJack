@@ -34,7 +34,9 @@ UI::Button::Button(SDL_Renderer *_renderer,
 	__dest.h = hight;
 };
 
-void UI::getMenu(int posX, int posY, bool left) {
+int UI::getMenu(int posX, int posY, bool left) {
+	number = 0;
+
 	if (((posX >= 400) && (posX <= 550)) && 
 		((posY >= 900) && (posX <= 1000)) &&
 		(left == false)) {
@@ -44,6 +46,7 @@ void UI::getMenu(int posX, int posY, bool left) {
 		((posY >= 900) && (posX <= 1000)) &&
 		(left == true)) {
 		buttonMenuAction->visual();
+		number = 1;
 	}
 	else {
 		buttonMenu->visual();
@@ -58,6 +61,7 @@ void UI::getMenu(int posX, int posY, bool left) {
 		((posY >= 900) && (posX <= 1000)) &&
 		(left == true)) {
 		buttonCardAction->visual();
+		number = 2;
 	}
 	else {
 		buttonCard->visual();
@@ -72,10 +76,13 @@ void UI::getMenu(int posX, int posY, bool left) {
 		((posY >= 900) && (posX <= 1000)) &&
 		(left == true)) {
 		buttonEnoughAction->visual();
+		number = 3;
 	}
 	else {
 		buttonEnough->visual();
 	}
+
+	return number;
 };
 
 UI::Button::~Button() {

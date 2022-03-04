@@ -6,7 +6,7 @@
 
 class VisualCard {
 public:
-	VisualCard(SDL_Renderer *renderer, std::string suit, char value);
+	VisualCard(SDL_Renderer *renderer, std::string suit, char value, bool dealer);
 	~VisualCard() ;
 
 	void visual();

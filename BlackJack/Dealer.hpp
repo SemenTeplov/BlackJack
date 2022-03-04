@@ -5,9 +5,20 @@
 
 class Dealer : Player {
 public:
-	Dealer() {};
+	Dealer() : Player() {};
 	~Dealer() {};
 
+	void setCard(Card);
+	void setChip(Chip);
+	Card getCard(int);
+	Chip getChip(int);
+	void delChip(int);
+	int getCountCards();
+	int getCountChips();
+
+private:
+	std::vector<Card> cards;
+	std::vector<Chip> chips;
 };
 
 

@@ -4,8 +4,10 @@
 
 Table::Table() {
 	init();
+	int point = 0;
 
 	while (run) {
+		point = 0;
 		SDL_GetMouseState(&posMouseX, &posMouseY);
 		click = false;
 
@@ -32,21 +34,35 @@ Table::Table() {
 		number = ui->getMenu(posMouseX, posMouseY, click);
 
 		if (number == 1) {
-
+			run = false;
 		}
 		else if (number == 2) {
 			Card* card = new Card(deck.getCard());
 			hand->setCard(*card);
 			vCard = new VisualCard(renderer,
 				card->getSuit(),
-				card->getValue());
+				card->getValue(),
+				false);
 		}
 		else if (number == 3) {
-
+			Card* card = new Card(deck.getCard());
+			dealer->setCard(*card);
+			vCard = new VisualCard(renderer,
+				card->getSuit(),
+				card->getValue(),
+				true);
 		}
 
 		if (vCard != nullptr) {
 			vCard->visual();
+		}
+
+		for (int i = 0; i < dealer->getCountCards(); i++) {
+			point += count(dealer->getCard(i));
+		}
+
+		if (point >= 17) {
+			run = false;
 		}
 
 		SDL_RenderPresent(renderer);
@@ -82,4 +98,62 @@ void Table::init() {
 	tTable = table->getTexture();
 	ui = new UI(renderer);
 	hand = new Hand();
+	dealer = new Dealer();
+};
+
+int Table::count(Card c) {
+	int number = 0;
+
+		if (c.getValue() == '6') {
+			number += 6;
+		}
+		else if (c.getValue() == '7') {
+			number += 7;
+		}
+		else if (c.getValue() == '8') {
+			number += 8;
+		}
+		else if (c.getValue() == '9') {
+			number += 9;
+		}
+		else if (c.getValue() == 'T' || c.getValue() == 'J' ||
+			c.getValue() == 'Q' || c.getValue() == 'K') {
+			number += 10;
+		}
+	return number;
+};
+
+bool Table::win() {
+	int pointHand = 0;
+	int pointDealer = 0;
+
+	for (int i = 0; i < hand->getCountCards(); i++) {
+		pointHand += count(hand->getCard(i));
+	}
+
+	if (pointHand == 21) {
+		return true;
+	}
+	if (pointHand > 21) {
+		return false;
+	}
+
+	for (int i = 0; i < dealer->getCountCards(); i++) {
+		pointDealer += count(dealer->getCard(i));
+	}
+
+	if (pointDealer == 21) {
+		return false;
+	}
+	if (pointHand > 21) {
+		return true;
+	}
+
+	if ((pointDealer >= 17) && (pointDealer > pointHand)) {
+		return false;
+	}
+	else if ((pointDealer >= 17) && (pointDealer <= pointHand)) {
+		return true;
+	}
+
 };

@@ -38,7 +38,10 @@ private:
 	Deck deck;
 	VisualCard *vCard;
 	Hand *hand;
+	Dealer *dealer;
 
+	int count(Card c);
+	bool win();
 
 	void init();
 

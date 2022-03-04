@@ -8,13 +8,13 @@ public:
 	Hand() : Player() {};
 	~Hand() {};
 
-	virtual void setCard(Card);
-	virtual void setChip(Chip);
-	virtual Card getCard(int);
-	virtual Chip getChip(int);
-	virtual void delChip(int);
-	virtual int getCountCards();
-	virtual int getCountChips();
+	void setCard(Card);
+	void setChip(Chip);
+	Card getCard(int);
+	Chip getChip(int);
+	void delChip(int);
+	int getCountCards();
+	int getCountChips();
 
 private:
 	std::vector<Card> cards;

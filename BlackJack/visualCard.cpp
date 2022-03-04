@@ -1,7 +1,7 @@
 #include "visualCard.hpp"
 #include <iostream>
 
-VisualCard::VisualCard(SDL_Renderer* renderer, std::string suit, char value) : 
+VisualCard::VisualCard(SDL_Renderer* renderer, std::string suit, char value, bool dealer) :
 	_renderer(renderer), _suit(suit), _value(value) {
 	texture = new Texture(_renderer, "res/cards.png");
 	_texture = texture->getTexture();
@@ -14,7 +14,12 @@ VisualCard::VisualCard(SDL_Renderer* renderer, std::string suit, char value) :
 	_src.h = 240;
 
 	_dest.x = destX;
-	_dest.y = destY;
+	if (dealer) {
+		_dest.y = destY - 349;
+	}
+	else {
+		_dest.y = destY;
+	}
 	_dest.w = 100;
 	_dest.h = 150;
 

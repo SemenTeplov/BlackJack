@@ -4,14 +4,29 @@ Table::Table() {
 	init();
 
 	while (run) {
+		SDL_GetMouseState(&posMouseX, &posMouseY);
+
 		while (SDL_PollEvent(&event) != 0) {
 			if (event.type == SDL_QUIT) {
 				run = false;
 			}
+			if (event.type == SDL_MOUSEBUTTONDOWN) {
+				if (event.button.button == SDL_BUTTON_LEFT) {
+					click = true;
+				}
+				else {
+					click = false;
+				}
+			}
+			else {
+				click = false;
+			}
 		}
+
 
 		SDL_RenderClear(renderer);
 		SDL_RenderCopy(renderer, tTable, NULL, NULL);
+		ui->getMenu(posMouseX, posMouseY, click);
 		SDL_RenderPresent(renderer);
 	}
 };
@@ -25,6 +40,7 @@ Table::~Table() {
     window = NULL;
 
 	delete table;
+	delete ui;
 };
 
 void Table::init() {
@@ -42,27 +58,5 @@ void Table::init() {
 
 	table = new Texture(renderer, "res/TableBlaxkjack.png");
 	tTable = table->getTexture();
-};
-
-void Table::visual() {
-	SDL_Init(SDL_INIT_EVERYTHING);
-
-	window = SDL_CreateWindow("SDL Tutorial", 
-		SDL_WINDOWPOS_UNDEFINED, 
-		SDL_WINDOWPOS_UNDEFINED, 
-		SCREEN_WIDTH, 
-		SCREEN_HEIGHT, 
-		SDL_WINDOW_SHOWN);
-
-	screenSurface = SDL_GetWindowSurface(window);
-
-	SDL_FillRect(screenSurface, 
-		NULL, 
-		SDL_MapRGB(screenSurface->format, 0xFF, 0xFF, 0xFF));
-
-	SDL_UpdateWindowSurface(window);
-
-	SDL_Delay(2000);
-
-	SDL_Quit();
+	ui = new UI(renderer);
 };

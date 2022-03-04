@@ -2,6 +2,7 @@
 #include <SDL_Image.h>
 
 #include "Texture.hpp"
+#include "UI.hpp"
 #include "Hand.hpp"
 #include "Dealer.hpp"
 
@@ -18,6 +19,9 @@ private:
 	const int SCREEN_HEIGHT = 1024;
 
 	bool run = true;
+	bool click = false;
+	int posMouseX = 0;
+	int posMouseY = 0;
 
 	SDL_Window *window = NULL;
 	SDL_Surface *screenSurface = NULL;
@@ -26,9 +30,10 @@ private:
 	SDL_Event event;
 
 	Texture *table;
+	UI *ui;
 
 	void init();
-	void visual();
+
 
 };
 

@@ -16,7 +16,6 @@ public:
 	char getKnight() const;
 	char getQueen() const;
 	char getKing() const;
-	//char getAce() const;
 
 private:
 	char _six = '6';
@@ -27,7 +26,6 @@ private:
 	char _knight = 'J';
 	char _queen = 'Q';
 	char _king = 'K';
-	//char _ace = 'A';
 };
 
 #endif //__PROTOTYPECARD__

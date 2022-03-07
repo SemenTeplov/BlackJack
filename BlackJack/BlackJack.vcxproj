@@ -146,8 +146,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Card.cpp" />
-    <ClCompile Include="Chip.cpp" />
-    <ClCompile Include="Color.cpp" />
     <ClCompile Include="Dealer.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="Hand.cpp" />
@@ -155,7 +153,6 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PrototypeCard.cpp" />
-    <ClCompile Include="PrototypeChip.cpp" />
     <ClCompile Include="Suit.cpp" />
     <ClCompile Include="Table.cpp" />
     <ClCompile Include="Texture.cpp" />
@@ -165,15 +162,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.hpp" />
-    <ClInclude Include="Chip.hpp" />
+    <ClInclude Include="cBlack.hpp" />
+    <ClInclude Include="cGreen.hpp" />
     <ClInclude Include="Color.hpp" />
+    <ClInclude Include="cRed.hpp" />
+    <ClInclude Include="cWhite.hpp" />
     <ClInclude Include="Dealer.hpp" />
     <ClInclude Include="Deck.hpp" />
     <ClInclude Include="Hand.hpp" />
     <ClInclude Include="Image.hpp" />
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="PrototypeCard.hpp" />
-    <ClInclude Include="PrototypeChip.hpp" />
     <ClInclude Include="Suit.hpp" />
     <ClInclude Include="Table.hpp" />
     <ClInclude Include="Texture.hpp" />

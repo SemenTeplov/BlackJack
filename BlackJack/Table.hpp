@@ -8,6 +8,10 @@
 #include "Card.hpp"
 #include "Deck.hpp"
 #include "visualCard.hpp"
+#include "cWhite.hpp"
+#include "cRed.hpp"
+#include "cGreen.hpp"
+#include "cBlack.hpp"
 
 #ifndef __TABLE__
 #define __TABLE__
@@ -16,6 +20,16 @@ class Table {
 public:
 	Table();
 	~Table();
+
+	cWhite setWChip() {}; // нужна визуализация
+	cRed setRChip() {}; // нужна визуализация
+	cGreen setGChip() {}; // нужна визуализация
+	cBlack setBChip() {}; // нужна визуализация
+
+	template<typename type>
+	int getChip(type chip) {
+		return chip.getValue();
+	};
 
 private:
 	const int SCREEN_WIDTH = 1280;

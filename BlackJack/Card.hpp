@@ -5,7 +5,7 @@
 #ifndef __CARD__
 #define __CARD__
 
-class Card : PrototypeCard {
+class Card : public PrototypeCard {
 public:
 	Card(int value, int suit);
 	~Card();

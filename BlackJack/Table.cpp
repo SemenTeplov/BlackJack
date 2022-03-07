@@ -81,6 +81,23 @@ Table::~Table() {
 	delete ui;
 };
 
+cWhite Table::setWChip() {
+	cWhite *chip = new cWhite();
+	return *chip;
+};
+cRed Table::setRChip() {
+	cRed *chip = new cRed();
+	return *chip;
+};
+cGreen Table::setGChip() {
+	cGreen *chip = new cGreen();
+	return *chip;
+};
+cBlack Table::setBChip() {
+	cBlack *chip = new cBlack();
+	return *chip;
+};
+
 void Table::init() {
 	SDL_Init(SDL_INIT_EVERYTHING);
 

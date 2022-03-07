@@ -1,7 +1,6 @@
 #include <vector>
 
 #include "Card.hpp"
-#include "Chip.hpp"
 
 #ifndef __Player__
 #define __Player__
@@ -12,17 +11,14 @@ public:
 	virtual ~Player() {};
 
 	virtual void setCard(Card);
-	virtual void setChip(Chip);
 	virtual Card getCard(int);
-	virtual Chip getChip(int);
-	virtual void delChip(int);
-	virtual int getCountCards();
-	virtual int getCountChips();
+	virtual int getCountCards() const;
+	virtual void setChip(int value);
+	virtual int getCountCash() const;
 
 private:
 	std::vector<Card> cards;
-	std::vector<Chip> chips;
-
+	int _cash = 0;
 };
 
 #endif //__Player__

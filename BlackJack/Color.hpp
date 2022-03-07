@@ -6,18 +6,19 @@
 class Color {
 public:
 	Color() {};
-	~Color() {};
+	virtual ~Color() {};
 
-	std::string getWhite();
-	std::string getRed();
-	std::string getGreen();
-	std::string getBlack();
+	std::string virtual getColor() const {
+		return _color;
+	};
+	
+	int virtual getValue() const {
+		return _value;
+	};
 
 private:
-	std::string _white = "white";
-	std::string _red = "red";
-	std::string _green = "green";
-	std::string _black = "black";
+	std::string _color = "color";
+	int _value = 0;
 };
 
 #endif //__COLOR__

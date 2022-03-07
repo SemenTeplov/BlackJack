@@ -9,17 +9,14 @@ public:
 	~Dealer() {};
 
 	void setCard(Card);
-	void setChip(Chip);
 	Card getCard(int);
-	Chip getChip(int);
-	void delChip(int);
-	int getCountCards();
-	int getCountChips();
+	int getCountCards() const;
+	void setChip(int value);
+	int getCountCash() const;
 
 private:
 	std::vector<Card> cards;
-	std::vector<Chip> chips;
+	int _cash = 0;
 };
-
 
 #endif //__DEALER__

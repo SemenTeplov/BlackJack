@@ -10,14 +10,13 @@ public:
 	Player() {};
 	virtual ~Player() {};
 
-	virtual void setCard(Card);
-	virtual Card getCard(int);
-	virtual int getCountCards() const;
+	virtual void setCount(int);
+	virtual int getCount() const;
 	virtual void setChip(int value);
 	virtual int getCountCash() const;
 
 private:
-	std::vector<Card> cards;
+	int _count = 0;
 	int _cash = 0;
 };
 

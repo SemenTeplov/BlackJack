@@ -1,15 +1,11 @@
 #include "Hand.hpp"
 
-void Hand::setCard(Card card) {
-	cards.push_back(card);
+void Hand::setCount(int count) {
+	_count += count;
 };
 
-Card Hand::getCard(int ind) {
-	return cards.at(ind);
-};
-
-int Hand::getCountCards() const {
-	return cards.size();
+int Hand::getCount() const {
+	return _count;
 };
 
 int Hand::getCountCash() const {

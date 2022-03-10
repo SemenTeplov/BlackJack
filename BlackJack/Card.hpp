@@ -1,26 +1,28 @@
-#include "PrototypeCard.hpp"
+#include "Suit.hpp"
+#include "Value.hpp"
 
 #include <ctime>
 
 #ifndef __CARD__
 #define __CARD__
 
-class Card : public PrototypeCard {
+template<typename Suit, typename Value>
+class Card {
 public:
-	Card(int value, int suit);
-	~Card();
+	Card(Suit suit, Value value) : _suit(suit.getSuit()), 
+		_value(value.getValue()) {};
+	~Card() {};
 
-	void setSuit();
-	std::string getSuit() const;
-	char getValue() const;
+	std::string getSuit() const {
+		return _suit;
+	};
+	std::string getValue() const {
+		return _value;
+	};
 
 private:
 	std::string _suit;
-	char _value;
-	int _numValue;
-	int _numSuit;
-
-	Suit *objSuit = new Suit();
+	std::string _value;
 };
 
 #endif //__CARD__

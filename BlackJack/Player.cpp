@@ -1,15 +1,11 @@
 #include "Player.hpp"
 
-void Player::setCard(Card card) {
-	cards.push_back(card);
+void Player::setCount(int count) {
+	_count += count;
 };
 
-Card Player::getCard(int ind) {
-	return cards.at(ind);
-};
-
-int Player::getCountCards() const {
-	return cards.size();
+int Player::getCount() const {
+	return _count;
 };
 
 void Player::setChip(int value) {

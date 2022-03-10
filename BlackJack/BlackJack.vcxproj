@@ -145,15 +145,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Card.cpp" />
     <ClCompile Include="Dealer.cpp" />
-    <ClCompile Include="Deck.cpp" />
     <ClCompile Include="Hand.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="PrototypeCard.cpp" />
-    <ClCompile Include="Suit.cpp" />
     <ClCompile Include="Table.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="UI.cpp" />
@@ -172,11 +168,11 @@
     <ClInclude Include="Hand.hpp" />
     <ClInclude Include="Image.hpp" />
     <ClInclude Include="Player.hpp" />
-    <ClInclude Include="PrototypeCard.hpp" />
     <ClInclude Include="Suit.hpp" />
     <ClInclude Include="Table.hpp" />
     <ClInclude Include="Texture.hpp" />
     <ClInclude Include="UI.hpp" />
+    <ClInclude Include="Value.hpp" />
     <ClInclude Include="visualCard.hpp" />
     <ClInclude Include="visualChip.hpp" />
   </ItemGroup>

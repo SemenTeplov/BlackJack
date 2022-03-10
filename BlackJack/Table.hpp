@@ -7,6 +7,7 @@
 #include "Dealer.hpp"
 #include "Card.hpp"
 #include "Deck.hpp"
+#include "Card.hpp"
 #include "visualCard.hpp"
 #include "cWhite.hpp"
 #include "cRed.hpp"
@@ -49,17 +50,30 @@ private:
 
 	Texture *table;
 	UI *ui;
-	Deck deck;
+	Deck *deck;
 	VisualCard *vCard;
 	Hand *hand;
 	Dealer *dealer;
 
-	int count(Card c);
 	bool win();
 
 	void init();
 
+	int randomSuit() {
+		std::random_device engine;
+		std::mt19937 gen(engine());
+		std::uniform_int_distribution<int> dist(1, 5);
+		
+		return dist(gen);
+	};
 
+	int randomValue() {
+		std::random_device engine;
+		std::mt19937 gen(engine());
+		std::uniform_int_distribution<int> dist(1, 9);
+
+		return dist(gen);
+	};
 };
 
 #endif //__TABLE__

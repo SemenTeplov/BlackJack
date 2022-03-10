@@ -8,14 +8,13 @@ public:
 	Dealer() : Player() {};
 	~Dealer() {};
 
-	void setCard(Card);
-	Card getCard(int);
-	int getCountCards() const;
+	void setCount(int);
+	int getCount() const;
 	void setChip(int value);
 	int getCountCash() const;
 
 private:
-	std::vector<Card> cards;
+	int _count = 0;
 	int _cash = 0;
 };
 

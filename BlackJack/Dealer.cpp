@@ -1,15 +1,11 @@
 #include "Dealer.hpp"
 
-void Dealer::setCard(Card card) {
-	cards.push_back(card);
+void Dealer::setCount(int count) {
+	_count += count;
 };
 
-Card Dealer::getCard(int ind) {
-	return cards.at(ind);
-};
-
-int Dealer::getCountCards() const {
-	return cards.size();
+int Dealer::getCount() const {
+	return _count;
 };
 
 int Dealer::getCountCash() const {
